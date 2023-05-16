@@ -1,0 +1,128 @@
+div#footer {
+    margin: 0px auto;
+    width: 1170px;
+    height: 330px;
+    /* border: 2px solid blue; */
+    background-color: #14092B;
+}
+
+div#footer div.cubos-pie {
+    border: 1px solid red;
+    background-color: #42306A;
+    float: left;
+    margin: 17px;
+    width: 250px;
+    height: 230px;
+    border-radius: 25px;
+}
+
+div#cuboredes {
+    background-color: #42306A;
+}
+
+div#footer div.cubos-pie>img {
+    margin-top: 5px;
+    margin-left: 88px;
+}
+
+div#footer div.cubos-pie p {
+    text-align: left;
+    color: #bfbfbf;
+    margin-left: 5px;
+}
+
+div#footer div.cubos-pie div.rrss div {
+    float: left;
+    margin: 7px;
+}
+
+div#twitter a {
+    background-image: url("../img/twit-sinpulsar.png");
+    width: 48px;
+    height: 48px;
+    display: block;
+}
+
+div#twitter a:hover {
+    background-image: url("../img/twit-pulsado.png");
+}
+
+div#instagram a {
+    background-image: url("../img/insta-azul.png");
+    width: 48px;
+    height: 48px;
+    display: block;
+}
+
+div#instagram a:hover {
+    background-image: url("../img/insta-off.png");
+}
+
+div#tiktok a {
+    background-image: url("../img/tik-sinpulsa.png");
+    width: 48px;
+    height: 48px;
+    display: block;
+}
+
+div#tiktok a:hover {
+    background-image: url("../img/tik-pulsado.png");
+}
+
+div#linkedin a {
+    background-image: url("../img/linkedin-azul.png");
+    width: 48px;
+    height: 48px;
+    display: block;
+}
+
+div#linkedin a:hover {
+    background-image: url("../img/linkedin_negro.png");
+}
+
+div#footer div.centra-cubos-pie {
+    /* border: 1px solid yellow; */
+    height: 250px;
+    width: 1150px;
+    margin: 0px auto;
+}
+
+div#footer div.centra-tiras-pie {
+    /* border: 1px solid brown; */
+    height: 60px;
+    width: 1150px;
+    margin: 0px auto;
+    margin-top: 10px;
+}
+
+div#footer div#copyright {
+    /* border: 1px solid silver; */
+    margin-top: 20PX;
+    padding: 4px;
+    float: left;
+    height: 75px;
+    width: 550px;
+}
+
+div#footer div#menufinal {
+    /* border: 1px solid silver; */
+    background-color: #42306A;
+    margin-top: 10PX;
+    padding: 5px;
+    float: right;
+    height: 25px;
+    width: 550px;
+}
+
+div.menuF {
+    /* border: 1px solid white; */
+    float: left;
+    height: 25px;
+    width: 90px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+div.menuF:hover {
+    font-weight: bold;
+}

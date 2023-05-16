@@ -1,0 +1,155 @@
+div#blogcontenido {
+    background-color: #42306A;
+    height: 1000px;
+}
+
+div#listaentradas {
+    background-color: #42306A;
+    width: 835px;
+    float: left;
+}
+
+div.entrada {
+    background-color: #dfdfdf;
+    width: 800px;
+    height: 200px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+div.entradaimg {
+    float: left;
+    background-color: #14092B;
+    width: 250px;
+    height: 150px;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+div.entradatexto {
+    float: left;
+    height: 150px;
+    margin-left: 20px;
+    margin-top: 25px;
+    width: 480px
+}
+
+div.entradatexto div {
+    color: #14092B;
+}
+
+div.entradatexto>div:nth-child(1) {
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+div.entradatexto>div:nth-child(1)+div {
+    margin: 5px;
+    text-align: justify;
+}
+
+div.entradatexto button {
+    margin-top: 10px;
+    float: left;
+    background-color: #14092B;
+}
+
+div.cajainfo {
+    margin-top: 44px;
+    /* border: 1px solid brown; */
+    height: 20px;
+}
+
+div.cajainfo>div {
+    /* border: 1px solid salmon; */
+    float: left;
+    margin: 24px;
+    height: 10px;
+}
+
+/* <div id="bannerderecho">
+                <div id="buscador">
+                    <input type="text" name="" id="">
+                    <input type="submit" value="">
+                </div>
+                <div id="categorias">
+                    <p class="headerblog">HEADER CATEGORIAS</p>
+                    <ul>
+                        <li>CAT1</li>
+                        <li>CAT2</li>
+                        <li>CAT3</li>
+                    </ul>
+                </div>
+                <div id="populares">
+                    <p class="headerblog">HEADER POPULARES</p>
+                    <div>
+                        <img src="" alt="">
+                        <div>
+                            <p>Title</p>
+                            <p>subtitle</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="moreinfo">
+                    <p class="headerblog">HEADER MORE INFO</p>
+                    <ul>
+                        <li>Comentarios</li>
+                        <li>Tweets</li>
+                        <li>About</li>
+                    </ul>
+                    <div>
+                        <p>blablabla</p>
+                        <p>blablabla</p>
+                        <p>blablabla</p>
+                    </div>
+                </div>
+                <div id="videowidget">
+                    <div>EL VIDEO</div>
+                </div>
+            </div>
+        </div> */
+
+div#bannerderecho {
+    background-color: #dfdfdf;
+    width: 320px;
+    float: right;
+    height: 800px;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+div#buscador {
+    border: 1px solid wheat;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+div#categorias {
+    background-color: #dfdfdf;
+    padding-top: 25px;
+}
+
+div#categorias p {
+    background-color: #dfdfdf;
+    color: #14092B;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #14092B;
+}
+
+div#categorias>ul>li {
+    list-style: circle;
+    color: #42306A;
+    padding: 5px;
+}
+
+div#videowidget {
+    border: 1px solid red;
+    margin-top: 20px;
+    height: 320px;
+}

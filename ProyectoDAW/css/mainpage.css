@@ -1,0 +1,27 @@
+body {
+    background-color: #fdfdfd;
+
+}
+
+* {
+    color: #fdfdfd;
+    text-decoration: none;
+
+}
+
+
+div#mainpage {
+    font-family: 'Fira Sans', sans-serif;
+    border: 2px solid black;
+    width: 1170px;
+    margin: 0px auto;
+    height: 1000px;
+}
+
+p {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+p.limpiar {
+    clear: both;
+}
