@@ -1,0 +1,136 @@
+div#contactocontenido {
+    background-color: #42306A;
+    padding-top: 30px;
+    position: relative;
+    height: 825px;
+}
+
+div#contactocontenido>div:nth-child(1) {
+    background-color: #dfdfdf;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 800px;
+    width: 750px;
+    float: left;
+}
+
+div#contactocontenido>div:nth-child(1)>p:nth-child(1) {
+    color: #14092B;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #14092B;
+}
+
+div#contactocontenido>div:nth-child(1)>p:nth-child(2) {
+    color: #14092B;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+
+div#contactocontenido>div:nth-child(1)>div {
+    padding: 30px;
+    height: 450px;
+}
+
+div#contactocontenido>div:nth-child(1) form {
+    /* border: 1px solid red; */
+    height: 450px;
+}
+
+div.campo {
+    margin: 30px;
+    height: 30px;
+    /* border: 1px solid blue; */
+}
+
+div.campo div.icon {
+    display: block;
+    float: left;
+    height: 48px;
+    width: 48px;
+    /* border: 1px solid #14092B; */
+    margin-right: 10px;
+}
+
+div.campo input {
+    display: block;
+    float: left;
+    height: 30px;
+    width: 500px;
+    margin-top: 7px;
+}
+
+textarea {
+    margin: 20px;
+    width: 600px;
+    height: 270px;
+}
+
+form>input {
+    margin-left: 20px;
+    height: 32px;
+    width: 200px;
+    background-color: #14092B;
+}
+
+/* <div id="contactocontenido">
+            <div>
+                <div class="bannerderecho">
+                    <div>
+                        <p>TITULO</p>
+                        <p>Contacto</p>
+                        <p>Calle calle, numero numero</p>
+                        <p>Direccion direccion</p>
+                        <p>Teléfono teléfono</p>
+                        <br /><br />
+                        <p>Nombre Nombre</p>
+                        <p>email email</p>
+                    </div>
+                    <div>
+                        <p>TITULO</p>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> */
+
+div#contactocontenido>div:nth-child(2) {
+    background-color: #dfdfdf;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 800px;
+    width: 300px;
+    float: right;
+}
+
+div.bannerderecho {
+    padding: 30px;
+}
+
+div.bannerderecho>div>p {
+    margin: 5px;
+    color: #42306A;
+}
+
+div.bannerderecho>div>p:nth-child(1) {
+    font-size: 30px;
+    border-bottom: 1px solid #14092B;
+    color: #14092B;
+    margin-bottom: 20px;
+}
+
+div.bannerderecho>div:nth-child(2) {
+    margin-top: 30px;
+}
+
+div.bannerderecho>div:nth-child(2) div {
+    border: 1px solid #14092B;
+    height: 400px;
+}
