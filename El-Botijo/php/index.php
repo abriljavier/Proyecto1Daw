@@ -1,8 +1,3 @@
-<?php
-include("conexion.php");
-$sql = $conexion->query("SELECT * FROM juegos LIMIT 8");
-?>
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
