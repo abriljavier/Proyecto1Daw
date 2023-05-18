@@ -1,6 +1,6 @@
 div#blogcontenido {
     background-color: #42306A;
-    height: 1000px;
+    height: 900px;
 }
 
 div#listaentradas {
@@ -115,7 +115,7 @@ div#bannerderecho {
     background-color: #dfdfdf;
     width: 320px;
     float: right;
-    height: 800px;
+    height: 860px;
     margin-top: 20px;
     margin-left: 5px;
     margin-bottom: 20px;

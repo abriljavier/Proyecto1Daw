@@ -100,7 +100,7 @@ div#footer div#copyright {
     margin-top: 20PX;
     padding: 4px;
     float: left;
-    height: 75px;
+    /* height: 75px; */
     width: 550px;
 }
 

@@ -2,7 +2,7 @@ div#contactocontenido {
     background-color: #42306A;
     padding-top: 30px;
     position: relative;
-    height: 825px;
+    height: 850px;
 }
 
 div#contactocontenido>div:nth-child(1) {
@@ -112,6 +112,7 @@ div#contactocontenido>div:nth-child(2) {
 
 div.bannerderecho {
     padding: 30px;
+    /* height: 900px; */
 }
 
 div.bannerderecho>div>p {
