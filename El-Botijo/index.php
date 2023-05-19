@@ -1,3 +1,9 @@
+<?php
+include("./php/conexion.php");
+$sqlnoticia = $conexion->query("SELECT * FROM juego") or die($conexion->error);
+$sql = $conexion->query("SELECT * FROM juego LIMIT 12 ") or die($conexion->error);
+?>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -62,11 +68,16 @@
                     </div>
                 </div>
                 <div id="contenedortexto">
-                    <p class="titular">Titular de la noticia</p>
-                    <p class="subtitular">Subtitular</p>
-                    <p class="cuerpo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, est veniam
-                        aliquid voluptate
-                        fuga nul...</p>
+                    <?php $primeranoticia = $sqlnoticia->fetch_array() ?>
+                    <p class="titular"> El juego de la semana es ...
+                        <?php echo $primeranoticia[1] ?>
+                    </p>
+                    <p class="subtitular">Editorial
+                        <?php echo $primeranoticia[7] ?>
+                    </p>
+                    <p class="cuerpo">
+                        <?php echo $primeranoticia[6] ?>
+                    </p>
                 </div>
             </div>
             <div id="main-content">
@@ -74,16 +85,12 @@
                 while ($fila = $sql->fetch_array()) {
                     ?>
                     <div class="caja">
-                        <div class="imagencaja"><img src="
-                        <?php
-                        $fila[5];
-                        ?>
-                        " alt="Soy una imagen"></div>
+                        <div class="imagencaja">
+                            <img src="./img/imgjuegos/<?php echo $fila[5] ?>" alt="" width=250px height=220px>
+                        </div>
                         <div class="divtextocaja">
                             <p class="textocaja">
-                                <?php
-                                $fila[1];
-                                ?>
+                                <?php echo $fila[1]; ?>
                             </p>
                         </div>
                         <div class="lupa">
@@ -126,7 +133,11 @@
                         width="250" height="230" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe></div>
                 <div class="cubos-pie">ultimos posts</div>
-                <div class="cubos-pie">galeria</div>
+                <div class="cubos-pie"><iframe width="250" height="230" src="https://www.youtube.com/embed/X2vKGvp93OI"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
             </div>
             <div class="centra-tiras-pie">
                 <div id="copyright">COPYRIGHT 2023 Leonard Peikoff ALL RIGHTS RESERVED</div>

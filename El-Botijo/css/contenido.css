@@ -145,7 +145,7 @@ div#main-content {
 div.caja {
     border: 1px solid black;
     margin: 15px;
-    height: 250px;
+    /* height: 250px; */
     width: 250px;
     float: left;
     position: relative;
@@ -162,12 +162,12 @@ div.caja {
 
 div.imagencaja {
     /* border: 1px solid white; */
-    height: 90%;
+    /* height: 90%; */
 }
 
 div.divtextocaja {
     /* border: 1px solid yellow; */
-    height: 34px;
+    height: 45px;
     background-color: #dfdfdf;
     z-index: 600;
     position: relative;
@@ -184,7 +184,7 @@ div.lupa a {
     background-color: white;
     width: 32px;
     height: 32px;
-    top: 227px;
+    top: 235px;
     right: 40px;
     border-radius: 2px;
     background-image: url("../img/lupa.png");
@@ -198,7 +198,7 @@ div.acceder a {
     background-color: white;
     width: 32px;
     height: 32px;
-    top: 227px;
+    top: 230px;
     right: 0px;
     border-radius: 2px;
     background-image: url("../img/burger-line.png");
