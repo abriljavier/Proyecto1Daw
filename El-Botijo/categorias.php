@@ -1,16 +1,16 @@
 <?php
-include("conexion.php");
-$sql = $conexion->query("SELECT * FROM categorias") or die($conexion->error);
+include("./php/conexion.php");
+$sql = $conexion->query("SELECT * FROM juego") or die($conexion->error);
 if (isset($_POST['insertarCategoria'])) {
     $categoria = $_POST['categoria'];
-    $sql2 = $conexion->query("INSERT INTO categorias (categoria) VALUES ('$categoria')") or die($conexion->error);
+    $sql2 = $conexion->query("INSERT INTO juego (nombre) VALUES ('$categoria')") or die($conexion->error);
     header("location:categorias.php");
 }
 
 if (isset($_GET['eliminar'])) {
     $seleccionada = $_GET['id_categoria'];
     echo $seleccionada;
-    $queryBorrar = $conexion->query("DELETE FROM categorias WHERE id_categoria=('$seleccionada')") or die($conexion->error);
+    $queryBorrar = $conexion->query("DELETE FROM juego WHERE ID=('$seleccionada')") or die($conexion->error);
     header("location:categorias.php");
 }
 ?>

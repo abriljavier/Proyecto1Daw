@@ -7,7 +7,7 @@ div#footer {
 }
 
 div#footer div.cubos-pie {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     background-color: #42306A;
     float: left;
     margin: 17px;

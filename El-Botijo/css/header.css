@@ -36,7 +36,9 @@ div.menu1 {
     text-align: center;
     font-size: 25px;
     transition: all 0.5s ease-in 0s;
-    border-radius: 25px;
+    border-radius: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 div.menu1 a:hover {
