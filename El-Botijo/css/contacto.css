@@ -15,13 +15,16 @@ div#contactocontenido>div:nth-child(1) {
     float: left;
 }
 
-div#contactocontenido>div:nth-child(1)>p:nth-child(1) {
+div#contactocontenido>div:nth-child(1)>p:nth-child(1),
+div#contactocontenido>div:nth-child(1)>p:nth-child(3) {
     color: #14092B;
     font-size: 30px;
     margin-top: 30px;
     margin-left: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border-bottom: 1px solid #14092B;
+    margin-right: 30px;
+    /* border: 1px solid blue; */
 }
 
 div#contactocontenido>div:nth-child(1)>p:nth-child(2) {
@@ -30,11 +33,17 @@ div#contactocontenido>div:nth-child(1)>p:nth-child(2) {
     margin-top: 10px;
     margin-left: 10px;
     margin-bottom: 30px;
+    text-align: justify;
+    padding-right: 10px;
+    line-height: 30px;
+    /* border: 1px solid red; */
 }
 
 div#contactocontenido>div:nth-child(1)>div {
-    padding: 30px;
+    margin-top: -30px;
+    padding: 10px;
     height: 450px;
+    /* border: 1px solid green; */
 }
 
 div#contactocontenido>div:nth-child(1) form {
@@ -63,12 +72,14 @@ div.campo input {
     height: 30px;
     width: 500px;
     margin-top: 7px;
+    color: #14092B;
 }
 
 textarea {
     margin: 20px;
     width: 600px;
-    height: 270px;
+    height: 200px;
+    color: #14092B;
 }
 
 form>input {
@@ -76,6 +87,10 @@ form>input {
     height: 32px;
     width: 200px;
     background-color: #14092B;
+}
+
+input.enviarcontacto {
+    background-color: white;
 }
 
 /* <div id="contactocontenido">

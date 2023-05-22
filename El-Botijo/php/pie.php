@@ -34,13 +34,12 @@
     <div class="centra-tiras-pie">
         <div id="copyright">COPYRIGHT 2023 Leonard Peikoff ALL RIGHTS RESERVED</div>
         <div id="menufinal">
-            <div class="menuF"><a href="">HOME</a></div>
-            <div class="menuF"><a href="">BLOG</a></div>
-            <div class="menuF"><a href="">GALLERY</a></div>
-            <div class="menuF"><a href="">SHOP</a></div>
-            <div class="menuF"><a href="">CONTACT</a></div>
-            <div class="menuF"><a href="">ABOUT ME</a></div>
+            <div class="menuF"><a href="./contacto.php">CONTACTO</a></div>
+            <div class="menuF"><a href="https://www.goblintrader.es/es/">SHOP</a></div>
+            <div class="menuF"><a href="./blog.php">BLOG</a></div>
+            <div class="menuF"><a href="./index.php">CATEGORIAS
+                </a></div>
+            <div class="menuF"><a href="./index.php">HOME</a></div>
         </div>
     </div>
-</div>
 </div>

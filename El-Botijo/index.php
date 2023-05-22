@@ -26,64 +26,73 @@ $sql = $conexion->query("SELECT * FROM juego LIMIT 12 ") or die($conexion->error
 </head>
 
 <body>
-    <?php
-    include("./php/menu.php");
-    ?>
-    <div id="contenido">
-        <div id="first-content">
-            <div id="joder">
-                <div id="contenedorgaleria">
-                    <div class="gallery">
-                        <div><img src="./img/Banner/boardgame_banner.jpg" alt="" height="200px" width="650px"></div>
-                        <div><img src="./img/Banner/dnd_banner_1.png" alt="" height="200px" width="650px"></div>
-                        <div><img src="./img/Banner/dnd_banner_2.jpg" alt="" height="200px" width="650px"></div>
-                        <div><img src="./img/Banner/scyte_banner.jpg" alt="" height="200px" width="650px"></div>
-                        <div><img src="./img/Banner/warha_banner_1.jpg" alt="" height="200px" width="650px"></div>
+    <div id="mainpage">
+        <?php
+        include("./php/menu.php");
+        ?>
+        <div id="contenido">
+            <div id="first-content">
+                <div id="joder">
+                    <div id="contenedorgaleria">
+                        <div class="gallery">
+                            <div><img src="./img/Banner/boardgame_banner.jpg" alt="" height="200px" width="650px"></div>
+                            <div><img src="./img/Banner/dnd_banner_1.png" alt="" height="200px" width="650px"></div>
+                            <div><img src="./img/Banner/dnd_banner_2.jpg" alt="" height="200px" width="650px"></div>
+                            <div><img src="./img/Banner/scyte_banner.jpg" alt="" height="200px" width="650px"></div>
+                            <div><img src="./img/Banner/warha_banner_1.jpg" alt="" height="200px" width="650px"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="contenedortexto">
-                <?php $primeranoticia = $sqlnoticia->fetch_array() ?>
-                <p class="titular"> El juego de la semana es ...
-                    <?php echo $primeranoticia[1] ?>
-                </p>
-                <p class="subtitular">Editorial
-                    <?php echo $primeranoticia[7] ?>
-                </p>
-                <p class="cuerpo">
-                    <?php echo $primeranoticia[6] ?>
-                </p>
-            </div>
-        </div>
-        <div id="main-content">
-            <?php
-            while ($fila = $sql->fetch_array()) {
-                ?>
-                <div class="caja">
-                    <div class="imagencaja">
-                        <img src="./img/imgjuegos/<?php echo $fila[5] ?>" alt="" width=250px height=220px>
-                    </div>
-                    <div class="divtextocaja">
-                        <p class="textocaja">
-                            <?php echo $fila[1]; ?>
-                        </p>
-                    </div>
-                    <div class="lupa">
-                        <a href="./img/imgjuegos/<?php echo $fila[5] ?>"></a>
-                    </div>
-                    <div class="acceder">
-                        <a href="detalles.php?detalles&id_juego=<?php echo $fila[0]; ?>"></a>
-                    </div>
+                <div id="contenedortexto">
+                    <?php
+                    $random = rand(1, 12);
+                    ?>
+                    <?php
+                    while ($primeranoticia = $sqlnoticia->fetch_array()) {
+                        if ($primeranoticia[0] == $random) { ?>
+                            <p class="titular"> Recomendamos...
+                                <?php echo $primeranoticia[1] ?>
+                            </p>
+                            <p class="subtitular">Editorial
+                                <?php echo $primeranoticia[7] ?>
+                            </p>
+                            <p class="cuerpo">
+                                <?php echo $primeranoticia[6] ?>
+                            </p>
+                        <?php }
+                    } ?>
                 </div>
+            </div>
+            <div id="main-content">
                 <?php
-            }
-            ?>
+                while ($fila = $sql->fetch_array()) {
+                    ?>
+                    <div class="caja">
+                        <div class="imagencaja">
+                            <img src="./img/imgjuegos/<?php echo $fila[5] ?>" alt="" width=250px height=220px>
+                        </div>
+                        <div class="divtextocaja">
+                            <p class="textocaja">
+                                <?php echo $fila[1]; ?>
+                            </p>
+                        </div>
+                        <div class="lupa">
+                            <a href="./img/imgjuegos/<?php echo $fila[5] ?>"></a>
+                        </div>
+                        <div class="acceder">
+                            <a href="detalles.php?detalles&id_juego=<?php echo $fila[0]; ?>"></a>
+                        </div>
+                    </div>
+                    <?php
+                }
+                ?>
+            </div>
+            <p class=" limpiar"></p>
         </div>
-        <p class=" limpiar"></p>
+        <?php
+        include("./php/pie.php");
+        ?>
     </div>
-    <?php
-    include("./php/pie.php");
-    ?>
 </body>
 
 </html>
