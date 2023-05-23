@@ -69,51 +69,10 @@ div.cajainfo>div {
     height: 10px;
 }
 
-/* <div id="bannerderecho">
-                <div id="buscador">
-                    <input type="text" name="" id="">
-                    <input type="submit" value="">
-                </div>
-                <div id="categorias">
-                    <p class="headerblog">HEADER CATEGORIAS</p>
-                    <ul>
-                        <li>CAT1</li>
-                        <li>CAT2</li>
-                        <li>CAT3</li>
-                    </ul>
-                </div>
-                <div id="populares">
-                    <p class="headerblog">HEADER POPULARES</p>
-                    <div>
-                        <img src="" alt="">
-                        <div>
-                            <p>Title</p>
-                            <p>subtitle</p>
-                        </div>
-                    </div>
-                </div>
-                <div id="moreinfo">
-                    <p class="headerblog">HEADER MORE INFO</p>
-                    <ul>
-                        <li>Comentarios</li>
-                        <li>Tweets</li>
-                        <li>About</li>
-                    </ul>
-                    <div>
-                        <p>blablabla</p>
-                        <p>blablabla</p>
-                        <p>blablabla</p>
-                    </div>
-                </div>
-                <div id="videowidget">
-                    <div>EL VIDEO</div>
-                </div>
-            </div>
-        </div> */
-
 div#bannerderecho {
+    border: 1px solid red;
     background-color: #dfdfdf;
-    width: 320px;
+    width: 318px;
     float: right;
     height: 860px;
     margin-top: 20px;
@@ -123,17 +82,30 @@ div#bannerderecho {
 }
 
 div#buscador {
-    border: 1px solid wheat;
+    border: 1px solid rebeccapurple;
     margin-top: 5px;
     margin-bottom: 10px;
 }
 
+input.inputbuscador {
+    height: 20px;
+    margin-left: 50px;
+}
+
+input.botonenviar {
+    height: 20px;
+    width: 55px;
+}
+
 div#categorias {
+    border: 1px solid snow;
     background-color: #dfdfdf;
     padding-top: 25px;
+    height: 125px;
 }
 
 div#categorias p {
+    border: 1px solid teal;
     background-color: #dfdfdf;
     color: #14092B;
     margin-top: 5px;
@@ -143,12 +115,19 @@ div#categorias p {
 }
 
 div#categorias>ul>li {
+    border: 1px solid palegoldenrod;
     list-style: circle;
     color: #42306A;
     padding: 5px;
 }
 
+div#categorias>ul>li>a {
+    list-style: circle;
+    color: #42306A;
+}
+
 div#videowidget {
+    border: 1px solid gold;
     border: 1px solid red;
     margin-top: 20px;
     height: 320px;

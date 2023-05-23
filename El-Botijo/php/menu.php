@@ -51,12 +51,12 @@
             </a>
         </div>
         <div>
-            <form action="" method="post">
+            <form action="http://abriljavier.com.es:8080/abriljavier/Validar_Password/webapp/acceso.jsp" method="post">
                 <p>Usuario
                     <input type="text" name="usuario" id="">
                 </p>
                 <p>Password
-                    <input type="password" name="password">
+                    <input type="password" name="contra">
                 </p>
                 <p>
                     <input type="submit" value="entrar" class="enviar">
