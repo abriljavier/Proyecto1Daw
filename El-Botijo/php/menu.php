@@ -7,7 +7,7 @@
             <a href="../index.php">
                 <div class="menu1">INICIO</div>
             </a>
-            <a href="">
+            <a href="../index.php">
                 <div class="menu1">JUEGOS
                     <div class="menudesplegable">
                         <?php
@@ -26,7 +26,7 @@
                 <div class="menu1">PARTIDAS</div>
             </a>
             <a href="">
-                <div class="menu1">SHOP
+                <div class="menu1">TIENDAS
                     <div class="menudesplegable">
                         <a href="https://zacatrus.es">
                             <div>Zacatrus</div>

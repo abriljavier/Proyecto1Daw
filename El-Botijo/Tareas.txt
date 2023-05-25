@@ -1,13 +1,7 @@
-Falta blog.php, va a ser las partidas que se han jugado
-
-Mete nombres de socios de verdad, e imágenes
-
 En shop en lugar de tiendas pon el organigrama de la asociación con consulta cruzada
 
 Incluir en index un div debajo de la galeria que ponga la misión de la asociación
 
-Cambiar categoria por Juegos en el menú
+EL PIE hay que retocarlo entero
 
-Añadir texto de últimas partidas dentro de blog
-
-Cambia el texto del pie
+Mete un más vistos en juegos, no sólo partidas

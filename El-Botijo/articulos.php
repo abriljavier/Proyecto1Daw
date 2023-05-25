@@ -1,6 +1,9 @@
 <?php
 include("./php/conexion.php");
-$sql = $conexion->query("Select partida.id, partida.fecha, partida.esCompeticion, juego.nombre, s1.nombre, s2.nombre, partida.img from partida join juego on partida.juegoID=juego.ID join socio s1 on partida.socio1ID=s1.ID join socio s2 on partida.socio2ID=s2.ID ORDER BY partida.fecha DESC LIMIT 4");
+
+$idarticulo = $_GET['idarticulo'];
+$sql = $conexion->query("Select partida.id, partida.fecha, partida.esCompeticion, juego.nombre, s1.nombre, s2.nombre, partida.img, partida.descripcion from partida join juego on partida.juegoID=juego.ID join socio s1 on partida.socio1ID=s1.ID join socio s2 on partida.socio2ID=s2.ID WHERE partida.ID = $idarticulo ORDER BY partida.fecha DESC LIMIT 4");
+$conexion->query("UPDATE partida SET visitas=visitas+1 WHERE partida.id = $idarticulo");
 
 $queryJuegosMasvistos = $conexion->query("SELECT juego.nombre, juego.ID, SUM(partida.visitas) AS total_visitas FROM juego JOIN partida ON juego.ID = partida.juegoID GROUP BY juego.nombre, juego.ID ORDER BY total_visitas DESC LIMIT 4;");
 $queryPartidasMasVistas = $conexion->query("SELECT partida.fecha, juego.nombre, partida.ID, SUM(partida.visitas) AS Total_Visitas FROM juego JOIN partida ON juego.ID = partida.juegoID GROUP BY partida.fecha, juego.nombre, partida.ID ORDER BY Total_Visitas DESC LIMIT 4;");
@@ -83,9 +86,14 @@ $queryPuntuacionSocios = $conexion->query("select nombre, puntuacion from socio 
                                     ?>
                                 </div>
                                 <div>
-                                    <a href="./articulos.php?idarticulo=<?php echo $entrada[0] ?>">Ver más</a>
+                                    <a href="./blog.php">Volver atrás</a>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="descripcionlarga">
+                        <div>
+                            <?php echo $entrada[7] ?>
                         </div>
                     </div>
                     <?php
@@ -100,7 +108,7 @@ $queryPuntuacionSocios = $conexion->query("select nombre, puntuacion from socio 
                     </form>
                 </div>
                 <div id="categorias">
-                    <p class="headerblog">LOS JUEGOS MÁS JUGADOS</p>
+                    <p class="headerblog">LOS JUEGOS MÁS VISTOS</p>
                     <ul>
                         <?php while ($juego = $queryJuegosMasvistos->fetch_array()) {
                             ?>
@@ -108,7 +116,7 @@ $queryPuntuacionSocios = $conexion->query("select nombre, puntuacion from socio 
                                 <?php echo $queryJuegoDerecho ?>
                                 <a href="./detalles.php?detalles&id_juego=<?php echo $juego[1] ?>">
                                     <?php echo $juego[0] ?> -
-                                    <?php echo $juego[2] ?> veces jugado
+                                    <?php echo $juego[2] ?> visitas
                                 </a>
                             </li>
                         <?php } ?>
@@ -149,12 +157,11 @@ $queryPuntuacionSocios = $conexion->query("select nombre, puntuacion from socio 
                     </div>
                 </div>
             </div>
+            <p class="limpiar"></p>
+            <?php
+            include("./php/pie.php");
+            ?>
         </div>
-        <p class="limpiar"></p>
-        <?php
-        include("./php/pie.php");
-        ?>
-    </div>
 </body>
 
 </html>

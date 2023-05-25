@@ -74,3 +74,65 @@ div.cuerpo {
     height: 400px;
     padding: 25px;
 }
+
+div.contenido {
+    /* border: 1px solid red; */
+    margin: 0px auto;
+}
+
+form {
+    /* border: 1px solid blue; */
+    height: 800px;
+}
+
+div.campo {
+    /* border: 1px solid green; */
+    margin: 0px auto;
+    height: 30px;
+    padding: 20px;
+    width: 50%;
+}
+
+div.campo label {
+    /* border: 1px solid yellow; */
+    font-weight: bold;
+}
+
+div.campo input:nth-child(2) {
+    margin-left: 30px;
+    /* border: 1px solid orange; */
+    width: 300px;
+}
+
+input.enviar {
+    width: 150px;
+    background-color: #42306A;
+    color: #dfdfdf;
+    border-radius: 2px;
+    float: right;
+}
+
+table {
+    /* border: 1px solid #14092B; */
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+    width: 50%;
+    border-collapse: collapse;
+
+}
+
+tr.cabecera {
+    background-color: #14092B;
+    color: white;
+    width: 100%;
+}
+
+tr.cuerpo {
+    background-color: #42306A;
+    color: #dfdfdf;
+}
+
+tr td {
+    padding: 15px;
+}

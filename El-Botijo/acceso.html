@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso página personal</title>
+    <link rel="stylesheet" href="./css/acceso.css">
+</head>
+
+<body>
+    <div class="principal">
+        <div class="titulo">ASOCICACIÓN DE JUEGOS DE MESA: CARGO</div>
+        <div class="menu">
+            <ul>
+                <li><a href="./acceso.jsp">HOME</a></li>
+                <li><a href="./acceso.html?tab=1">ALTA</a></li>
+                <li><a href="">MODIFICAR</a></li>
+                <li><a href="">BORRAR</a></li>
+                <li><a href="">LISTAR</a></li>
+                <li><a href="">SIGUIENTE</a></li>
+            </ul>
+        </div>
+        <div class="cuerpo">
+            <div class="contenido">
+                <form action="cargo.jsp?tab=alta" method="post">
+                    <div class="campo">
+                        <label for="nombre">Cargo</label> <input type="text" name="cargo">
+                    </div>
+                    <div class="campo">
+                        <input type="submit" value="enviar" name="submit" class="enviar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
