@@ -1,0 +1,194 @@
+<?php
+include("./php/conexion.php");
+
+$idarticulo = $_GET['idarticulo'];
+$sql = $conexion->query("Select partida.id, partida.fecha, partida.esCompeticion, juego.nombre, s1.nombre, s2.nombre, partida.img, partida.descripcion from partida join juego on partida.juegoID=juego.ID join socio s1 on partida.socio1ID=s1.ID join socio s2 on partida.socio2ID=s2.ID WHERE partida.ID = $idarticulo ORDER BY partida.fecha DESC LIMIT 4");
+$conexion->query("UPDATE partida SET visitas=visitas+1 WHERE partida.id = $idarticulo");
+
+$queryJuegosMasvistos = $conexion->query("SELECT juego.nombre, juego.ID, SUM(partida.visitas) AS total_visitas FROM juego JOIN partida ON juego.ID = partida.juegoID GROUP BY juego.nombre, juego.ID ORDER BY total_visitas DESC LIMIT 4;");
+$queryPartidasMasVistas = $conexion->query("SELECT partida.fecha, juego.nombre, partida.ID, SUM(partida.visitas) AS Total_Visitas FROM juego JOIN partida ON juego.ID = partida.juegoID GROUP BY partida.fecha, juego.nombre, partida.ID ORDER BY Total_Visitas DESC LIMIT 4;");
+$queryPuntuacionSocios = $conexion->query("select nombre, puntuacion from socio order by puntuacion desc LIMIT 4");
+$queryComentarios = $conexion->query("SELECT comentario.fecha,comentario.comentario,comentario.autor FROM `comentario` join partida on partida.ID=comentario.partidaID where partida.ID = $idarticulo LIMIT 4");
+?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Proyecto 1DAW - SOLVAM</title>
+
+    <!-- CSS ================================================== -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="./css/mainpage.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/blog.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&display=swap" rel="stylesheet">
+    <!-- Favicons ================================================== -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- JS ================================================== -->
+</head>
+
+<body>
+    <div id="mainpage">
+        <?php
+        include("./php/menu.php");
+        ?>
+        <div id="blogcontenido">
+            <div id="listaentradas">
+                <?php
+                while ($entrada = $sql->fetch_array()) {
+                    ?>
+                    <div class="entrada">
+                        <div class="entradaimg">
+                            <img src="./img/imgpartidas/<?php echo $entrada[6] ?>" alt="" width="250px" height="150px">
+                        </div>
+                        <div class="entradatexto">
+                            <div>
+                                <?php
+                                echo $entrada[4];
+                                ?> VS
+                                <?php
+                                echo $entrada[5];
+                                ?> ,
+                                <?php $newDate = date("d/m/Y", strtotime($entrada[1])); ?>
+                                <?php echo $newDate ?>
+                            </div>
+                            <div> El día
+                                <?php $newDate = date("d/m/Y", strtotime($entrada[1])); ?>
+                                <?php echo $newDate ?>
+                                jugaron a
+                                <?php
+                                echo $entrada[3];
+                                ?> nuestros compañeros
+                                <?php
+                                echo $entrada[4];
+                                ?> y
+                                <?php
+                                echo $entrada[5];
+                                ?>. Pásate y no te pierdas la siguiente.
+                            </div>
+                            <div class="cajainfo">
+                                <div>
+                                    <?php $newDate = date("d/m/Y", strtotime($entrada[1])); ?>
+                                    <?php echo $newDate ?>
+                                </div>
+                                <div>
+                                    <?php if ($entrada[2] == 1) { ?>Clasificatorio
+                                    <?php } else { ?>Amistoso
+                                    <?php } ?>
+                                </div>
+                                <div>
+                                    <?php
+                                    $entrada[3];
+                                    ?>
+                                </div>
+                                <div>
+                                    <a href="./blog.php">Volver atrás</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="descripcionlarga">
+                        <div>
+                            <?php echo $entrada[7] ?>
+                        </div>
+                    </div>
+                    <?php
+                }
+                ?>
+                <?php
+                $numeroComentarios = $queryComentarios->num_rows;
+                if ($numeroComentarios <= 0) {
+                    ?>
+                    <div> NO HAY COMENTARIOS DISPONIBLES</div>
+                    <?php
+                } else {
+                    ?>
+                    <div> ULTIMOS COMENTARIOS...</div>
+                    <br />
+                    <?php while ($comentarios = $queryComentarios->fetch_array()) { ?>
+                        <div class="comentariolargo">
+                            <img src="./img/favicon.ico" alt="">
+                            <div>
+                                <p id="pcomentario">
+                                    El día<span class="texto_resaltado">
+                                        <?php echo $comentarios[0] ?>
+                                    </span> , <span class="texto_resaltado">
+                                        <?php echo $comentarios[2] ?>
+                                    </span> dijo:
+                                    <?php echo $comentarios[1] ?>,
+                                </p>
+                            </div>
+                        </div>
+                    <?php }
+                } ?>
+            </div>
+            <div id="bannerderecho">
+                <div id="buscador">
+                    <form action="">
+                        <input type="text" name="datos" id="" class="inputbuscador">
+                        <input type="submit" value="Buscar" class="botonenviar">
+                    </form>
+                </div>
+                <div id="categorias">
+                    <p class="headerblog">LOS JUEGOS MÁS VISTOS</p>
+                    <ul>
+                        <?php while ($juego = $queryJuegosMasvistos->fetch_array()) {
+                            ?>
+                            <li>
+                                <?php echo $queryJuegoDerecho ?>
+                                <a href="./detalles.php?detalles&id_juego=<?php echo $juego[1] ?>">
+                                    <?php echo $juego[0] ?> -
+                                    <?php echo $juego[2] ?> visitas
+                                </a>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+                <div id="categorias">
+                    <p class="headerblog">LAS PARTIDAS MÁS VISTAS</p>
+                    <ul>
+                        <?php while ($partidas = $queryPartidasMasVistas->fetch_array()) { ?>
+                            <li>
+                                <a href="./articulos.php?idarticulo=<?php echo $partidas[2] ?>">
+                                    <?php $newDate = date("d/m/Y", strtotime($partidas[0])); ?>
+                                    <?php echo $newDate ?> -
+                                    <?php echo $partidas[1] ?> -
+                                    <?php echo $partidas[3] ?> visitas
+                                </a>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+                <div id="categorias">
+                    <p class="headerblog">LOS SOCIOS CON MÁS PUNTUACIÓN</p>
+                    <ul>
+                        <?php while ($socio = $queryPuntuacionSocios->fetch_array()) { ?>
+                            <li>
+                                <?php echo $socio[0] ?> -
+                                <?php echo $socio[1] ?> puntos
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+                <div id="videowidget">
+                    <div>
+                        <iframe width="310" height="320" src="https://www.youtube.com/embed/gOo2t0BSGQE"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <p class="limpiar"></p>
+            <?php
+            include("./php/pie.php");
+            ?>
+        </div>
+</body>
+
+</html>

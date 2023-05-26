@@ -1,0 +1,7 @@
+En shop en lugar de tiendas pon el organigrama de la asociación con consulta cruzada
+
+Incluir en index un div debajo de la galeria que ponga la misión de la asociación
+
+Mete un más vistos en juegos, no sólo partidas
+
+Añade la tabla comentarios con id,comentario,fecha,autor e id_partida con id_partida es la clave ajena

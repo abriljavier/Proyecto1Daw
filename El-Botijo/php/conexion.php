@@ -4,3 +4,4 @@ $conexion = new mysqli("localhost", "abriljavier", "javierabril.", "ja_proyectob
 if ($conexion->connect_error) {
     die('No se ha podido conectar');
 }
+?>

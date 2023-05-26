@@ -1,0 +1,138 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+a {
+    color: #42306A;
+}
+
+p.limpiar {
+    clear: both;
+}
+
+body {
+    background-color: #14092B;
+}
+
+div.principal {
+    background-color: #42306A;
+    margin: 20px;
+    padding-top: 5px;
+}
+
+div.titulo {
+    background-color: #dfdfdf;
+    height: 80px;
+    font-size: 30px;
+    margin: 20px;
+    padding-top: 10px;
+    text-align: center;
+
+}
+
+div.menu {
+    background-color: #dfdfdf;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+div.menu ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+div.menu li {
+    /* border: 1px solid red; */
+    display: block;
+    float: left;
+    height: 35px;
+    margin-left: 15px;
+    padding-top: 5px;
+    padding-right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div.menu li:nth-child(1),
+div.menu li:nth-child(2),
+div.menu li:nth-child(3),
+div.menu li:nth-child(4),
+div.menu li:nth-child(5) {
+    border-right: 2px solid #14092B;
+}
+
+div.cuerpo {
+    background-color: #dfdfdf;
+    margin: 15px;
+    height: 400px;
+    padding: 25px;
+}
+
+div.contenido {
+    /* border: 1px solid red; */
+    margin: 0px auto;
+}
+
+form {
+    /* border: 1px solid blue; */
+    height: 800px;
+}
+
+div.campo {
+    /* border: 1px solid green; */
+    margin: 0px auto;
+    height: 30px;
+    padding: 20px;
+    width: 50%;
+}
+
+div.campo label {
+    /* border: 1px solid yellow; */
+    font-weight: bold;
+}
+
+div.campo input:nth-child(2) {
+    margin-left: 30px;
+    /* border: 1px solid orange; */
+    width: 300px;
+}
+
+input.enviar {
+    width: 150px;
+    background-color: #42306A;
+    color: #dfdfdf;
+    border-radius: 2px;
+    float: right;
+}
+
+table {
+    /* border: 1px solid #14092B; */
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+    width: 50%;
+    border-collapse: collapse;
+
+}
+
+tr.cabecera {
+    background-color: #14092B;
+    color: white;
+    width: 100%;
+}
+
+tr.cuerpo {
+    background-color: #42306A;
+    color: #dfdfdf;
+}
+
+tr td {
+    padding: 15px;
+}
