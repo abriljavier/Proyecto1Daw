@@ -8,6 +8,7 @@ $conexion->query("UPDATE partida SET visitas=visitas+1 WHERE partida.id = $idart
 $queryJuegosMasvistos = $conexion->query("SELECT juego.nombre, juego.ID, SUM(partida.visitas) AS total_visitas FROM juego JOIN partida ON juego.ID = partida.juegoID GROUP BY juego.nombre, juego.ID ORDER BY total_visitas DESC LIMIT 4;");
 $queryPartidasMasVistas = $conexion->query("SELECT partida.fecha, juego.nombre, partida.ID, SUM(partida.visitas) AS Total_Visitas FROM juego JOIN partida ON juego.ID = partida.juegoID GROUP BY partida.fecha, juego.nombre, partida.ID ORDER BY Total_Visitas DESC LIMIT 4;");
 $queryPuntuacionSocios = $conexion->query("select nombre, puntuacion from socio order by puntuacion desc LIMIT 4");
+$queryComentarios = $conexion->query("SELECT comentario.fecha,comentario.comentario,comentario.autor FROM `comentario` join partida on partida.ID=comentario.partidaID where partida.ID = $idarticulo LIMIT 4");
 ?>
 
 <!DOCTYPE html>
@@ -99,6 +100,32 @@ $queryPuntuacionSocios = $conexion->query("select nombre, puntuacion from socio 
                     <?php
                 }
                 ?>
+                <?php
+                $numeroComentarios = $queryComentarios->num_rows;
+                if ($numeroComentarios <= 0) {
+                    ?>
+                    <div> NO HAY COMENTARIOS DISPONIBLES</div>
+                    <?php
+                } else {
+                    ?>
+                    <div> ULTIMOS COMENTARIOS...</div>
+                    <br />
+                    <?php while ($comentarios = $queryComentarios->fetch_array()) { ?>
+                        <div class="comentariolargo">
+                            <img src="./img/favicon.ico" alt="">
+                            <div>
+                                <p id="pcomentario">
+                                    El día<span class="texto_resaltado">
+                                        <?php echo $comentarios[0] ?>
+                                    </span> , <span class="texto_resaltado">
+                                        <?php echo $comentarios[2] ?>
+                                    </span> dijo:
+                                    <?php echo $comentarios[1] ?>,
+                                </p>
+                            </div>
+                        </div>
+                    <?php }
+                } ?>
             </div>
             <div id="bannerderecho">
                 <div id="buscador">

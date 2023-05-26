@@ -1,0 +1,47 @@
+/* <div id="contenidosocios">
+            <div id="descripcion">
+                <div id="tarjeta">
+                    <img src="" alt="la cara de uno">
+                    <p class="nombre"> Perico
+                    </p>
+                    <p class="fechanacimiento"> 2222/22/22
+                    </p>
+                    <p class="puntuacion">
+                        1000 points
+                    </p>
+                    <p class="cargo">
+                        Ministro
+                    </p>
+                </div>
+            </div>
+            <p class=" limpiar"></p>
+        </div> */
+
+div#contenidosocios {
+    background-color: #42306A;
+    width: 1170px;
+}
+
+
+div#tarjeta {
+    border: 1px solid red;
+    width: 250px;
+    height: 250px;
+    float: left;
+    margin: 20px;
+}
+
+div#tarjeta div {
+    border: 1px solid #dfdfdf;
+    margin: 5px;
+    width: 110px;
+    height: 130px;
+    align-content: ;
+    display: flex;
+}
+
+div#tarjeta div img {
+    width: 100px;
+    height: 120px;
+
+}
