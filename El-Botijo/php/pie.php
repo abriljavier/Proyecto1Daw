@@ -36,16 +36,22 @@
                 ?>
                 <img src="../img/trophy.gif" alt="Una copa">
                 <div class="oro">
-                    <?php echo $nombres[0] ?> -
-                    <?php echo $puntuaciones[0] ?> puntos
+                    <a href="../socios.php">
+                        <?php echo $nombres[0] ?> -
+                        <?php echo $puntuaciones[0] ?> puntos
+                    </a>
                 </div>
                 <div class="plata">
-                    <?php echo $nombres[1] ?> -
-                    <?php echo $puntuaciones[1] ?> puntos
+                    <a href="../socios.php">
+                        <?php echo $nombres[1] ?> -
+                        <?php echo $puntuaciones[1] ?> puntos
+                    </a>
                 </div>
                 <div class="bronce">
-                    <?php echo $nombres[2] ?> -
-                    <?php echo $puntuaciones[2] ?> puntos
+                    <a href="../socios.php">
+                        <?php echo $nombres[2] ?> -
+                        <?php echo $puntuaciones[2] ?> puntos
+                    </a>
                 </div>
                 <p class="limpiar"></p>
                 <p id="copas">NUESTROS CAMPEONES</p>
@@ -61,7 +67,7 @@
         <div id="copyright">COPYRIGHT 2023 Leonard Peikoff ALL RIGHTS RESERVED</div>
         <div id="menufinal">
             <div class="menuF"><a href="./contacto.php">CONTACTO</a></div>
-            <div class="menuF"><a href="https://www.goblintrader.es/es/">TIENDAS</a></div>
+            <div class="menuF"><a href="./socios.php">SOCIOS</a></div>
             <div class="menuF"><a href="./blog.php">PARTIDAS</a></div>
             <div class="menuF"><a href="./index.php">CATEGORIAS
                 </a></div>

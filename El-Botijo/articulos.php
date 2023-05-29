@@ -112,11 +112,12 @@ $queryComentarios = $conexion->query("SELECT comentario.fecha,comentario.comenta
                     <br />
                     <?php while ($comentarios = $queryComentarios->fetch_array()) { ?>
                         <div class="comentariolargo">
-                            <img src="./img/favicon.ico" alt="">
+                            <img src="./img/user-icon.png" alt="">
                             <div>
                                 <p id="pcomentario">
                                     El día<span class="texto_resaltado">
-                                        <?php echo $comentarios[0] ?>
+                                        <?php $newDate = date("d/m/Y", strtotime($comentarios[0])); ?>
+                                        <?php echo $newDate ?>
                                     </span> , <span class="texto_resaltado">
                                         <?php echo $comentarios[2] ?>
                                     </span> dijo:
@@ -143,7 +144,7 @@ $queryComentarios = $conexion->query("SELECT comentario.fecha,comentario.comenta
                                 <?php echo $queryJuegoDerecho ?>
                                 <a href="./detalles.php?detalles&id_juego=<?php echo $juego[1] ?>">
                                     <?php echo $juego[0] ?> -
-                                    <?php echo $juego[2] ?> visitas
+                                    <?php echo $juego[2] ?> veces jugado
                                 </a>
                             </li>
                         <?php } ?>
@@ -168,9 +169,10 @@ $queryComentarios = $conexion->query("SELECT comentario.fecha,comentario.comenta
                     <p class="headerblog">LOS SOCIOS CON MÁS PUNTUACIÓN</p>
                     <ul>
                         <?php while ($socio = $queryPuntuacionSocios->fetch_array()) { ?>
-                            <li>
-                                <?php echo $socio[0] ?> -
-                                <?php echo $socio[1] ?> puntos
+                            <li><a href="./socios.php">
+                                    <?php echo $socio[0] ?> -
+                                    <?php echo $socio[1] ?> puntos
+                                </a>
                             </li>
                         <?php } ?>
                     </ul>

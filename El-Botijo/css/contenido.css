@@ -8,13 +8,13 @@ div#contenido {
 
 div#first-content {
     /* margin: 15px; */
-    height: 25%;
+    height: 300px;
     /* border: 1px solid red; */
     perspective: 700px;
     margin-left: 15px;
     padding-top: 15px;
     margin-right: 15px;
-    height: 215px;
+    /* height: 215px; */
     position: relative;
 }
 
@@ -118,7 +118,7 @@ div#first-content div:nth-child(2) p {
 
 p.titular {
     margin: 10px;
-    font-size: 25px;
+    font-size: 32px;
     text-shadow: 2px 1px 0px #a484e8;
     border-bottom: 2px solid #14092B;
 }
@@ -126,13 +126,14 @@ p.titular {
 p.subtitular {
     margin: 10px;
     margin-top: 30px;
+    font-size: 18px;
 
 }
 
 p.cuerpo {
     margin: 10px;
     margin-top: 20px;
-    font-size: 12px;
+    font-size: 18px;
 }
 
 
