@@ -25,25 +25,8 @@
             <a href="../blog.php">
                 <div class="menu1">PARTIDAS</div>
             </a>
-            <a href="">
-                <div class="menu1">TIENDAS
-                    <div class="menudesplegable">
-                        <a href="https://zacatrus.es">
-                            <div>Zacatrus</div>
-                        </a>
-                        <a href="https://www.goblintrader.es/es/">
-                            <div>Goblin Trader</div>
-                        </a>
-                        <a href="https://dracotienda.com">
-                            <div>Dracotienda</div>
-                        </a>
-                        <a href="https://ludosaurus.com">
-                            <div>Ludosaurus</div>
-                        </a>
-                        <a href="https://homoludicus-valencia.org">
-                            <div>Homo Ludicus</div>
-                        </a>
-                    </div>
+            <a href="../socios.php">
+                <div class="menu1">SOCIOS
                 </div>
             </a>
             <a href="../contacto.php">
@@ -51,7 +34,7 @@
             </a>
         </div>
         <div>
-            <form action="http://abriljavier.com.es:8080/abriljavier/Validar_Password/webapp/acceso.jsp" method="post">
+            <form action="http://abriljavier.com.es:8080/abriljavier/El-Botijo/webapp/index.jsp" method="post">
                 <p>Usuario
                     <input type="text" name="usuario" id="">
                 </p>

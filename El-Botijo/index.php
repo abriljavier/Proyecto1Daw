@@ -35,11 +35,11 @@ $sql = $conexion->query("SELECT * FROM juego LIMIT 12 ") or die($conexion->error
                 <div id="joder">
                     <div id="contenedorgaleria">
                         <div class="gallery">
-                            <div><img src="./img/Banner/boardgame_banner.jpg" alt="" height="200px" width="650px"></div>
-                            <div><img src="./img/Banner/dnd_banner_1.png" alt="" height="200px" width="650px"></div>
-                            <div><img src="./img/Banner/dnd_banner_2.jpg" alt="" height="200px" width="650px"></div>
-                            <div><img src="./img/Banner/scyte_banner.jpg" alt="" height="200px" width="650px"></div>
-                            <div><img src="./img/Banner/warha_banner_1.jpg" alt="" height="200px" width="650px"></div>
+                            <div><img src="./img/Banner/boardgame_banner.jpg" alt="" height="300px" width="650px"></div>
+                            <div><img src="./img/Banner/dnd_banner_1.png" alt="" height="300px" width="650px"></div>
+                            <div><img src="./img/Banner/dnd_banner_2.jpg" alt="" height="300px" width="650px"></div>
+                            <div><img src="./img/Banner/scyte_banner.jpg" alt="" height="300px" width="650px"></div>
+                            <div><img src="./img/Banner/warha_banner_1.jpg" alt="" height="300px" width="650px"></div>
                         </div>
                     </div>
                 </div>

@@ -50,19 +50,12 @@ $queryPuntuacionSocios = $conexion->query("select nombre, puntuacion from socio 
                                 <?php
                                 echo $entrada[5];
                                 ?> ,
-                                <<<<<<< HEAD <?php echo $entrada[1] ?>
-                            </div>
-                            <div> El día
-                                <?php echo $entrada[1] ?> jugaron a
-                                =======
-                                <?php $newDate = date("d/m/Y", strtotime($entrada[1])); ?>
-                                <?php echo $newDate ?>
+                                <?php echo $entrada[1] ?>
                             </div>
                             <div> El día
                                 <?php $newDate = date("d/m/Y", strtotime($entrada[1])); ?>
                                 <?php echo $newDate ?>
                                 jugaron a
-                                >>>>>>> aparece-php
                                 <?php
                                 echo $entrada[3];
                                 ?> nuestros compañeros
@@ -75,11 +68,8 @@ $queryPuntuacionSocios = $conexion->query("select nombre, puntuacion from socio 
                             </div>
                             <div class="cajainfo">
                                 <div>
-                                    <<<<<<< HEAD <?php echo $entrada[1] ?>
-                                        =======
-                                        <?php $newDate = date("d/m/Y", strtotime($entrada[1])); ?>
-                                        <?php echo $newDate ?>
-                                        >>>>>>> aparece-php
+                                    <?php $newDate = date("d/m/Y", strtotime($entrada[1])); ?>
+                                    <?php echo $newDate ?>
                                 </div>
                                 <div>
                                     <?php if ($entrada[2] == 1) { ?>Clasificatorio
@@ -91,108 +81,83 @@ $queryPuntuacionSocios = $conexion->query("select nombre, puntuacion from socio 
                                     $entrada[3];
                                     ?>
                                 </div>
-                                <<<<<<< HEAD=======<div>
+                                <div>
                                     <a href="./articulos.php?idarticulo=<?php echo $entrada[0] ?>">Ver más</a>
+                                </div>
                             </div>
-                            >>>>>>> aparece-php
                         </div>
                     </div>
-                </div>
-                <?php
+                    <?php
                 }
                 ?>
-        </div>
-        <div id="bannerderecho">
-            <div id="buscador">
-                <form action="">
-                    <<<<<<< HEAD <input type="text" name="" id="">
-                        <input type="submit" value="">
-                </form>
             </div>
-            <div id="categorias">
-                <p class="headerblog">POR JUEGO</p>
-                <ul>
-                    <li>CAT1</li>
-                    <li>CAT2</li>
-                    <li>CAT3</li>
-                </ul>
-            </div>
-            <div id="categorias">
-                <p class="headerblog">POR SOCIO</p>
-
-                <ul>
-                    <li>CAT1</li>
-                </ul>
-            </div>
-            <div id="categorias">
-                <p class="headerblog">¿CLASIFICATORIAS?</p>
-                <ul>
-                    <li>Clasificatorias</li>
-                    <li>Amistoso</li>
-                    =======
-                    <input type="text" name="datos" id="" class="inputbuscador">
-                    <input type="submit" value="Buscar" class="botonenviar">
+            <div id="bannerderecho">
+                <div id="buscador">
+                    <form action="">
+                        <input type="text" name="datos" id="" class="inputbuscador">
+                        <input type="submit" value="Buscar" class="botonenviar">
                     </form>
-            </div>
-            <div id="categorias">
-                <p class="headerblog">LOS JUEGOS MÁS JUGADOS</p>
-                <ul>
-                    <?php while ($juego = $queryJuegosMasvistos->fetch_array()) {
-                        ?>
-                        <li>
-                            <?php echo $queryJuegoDerecho ?>
-                            <a href="./detalles.php?detalles&id_juego=<?php echo $juego[1] ?>">
-                                <?php echo $juego[0] ?> -
-                                <?php echo $juego[2] ?> veces jugado
-                            </a>
-                        </li>
-                    <?php } ?>
-                </ul>
-            </div>
-            <div id="categorias">
-                <p class="headerblog">LAS PARTIDAS MÁS VISTAS</p>
-                <ul>
-                    <?php while ($partidas = $queryPartidasMasVistas->fetch_array()) { ?>
-                        <li>
-                            <a href="./articulos.php?idarticulo=<?php echo $partidas[2] ?>">
-                                <?php $newDate = date("d/m/Y", strtotime($partidas[0])); ?>
-                                <?php echo $newDate ?> -
-                                <?php echo $partidas[1] ?> -
-                                <?php echo $partidas[3] ?> visitas
-                            </a>
-                        </li>
-                    <?php } ?>
-                </ul>
-            </div>
-            <div id="categorias">
-                <p class="headerblog">LOS SOCIOS CON MÁS PUNTUACIÓN</p>
-                <ul>
-                    <?php while ($socio = $queryPuntuacionSocios->fetch_array()) { ?>
-                        <li>
-                            <?php echo $socio[0] ?> -
-                            <?php echo $socio[1] ?> puntos
-                        </li>
-                    <?php } ?>
-                    >>>>>>> aparece-php
-                </ul>
-            </div>
-            <div id="videowidget">
-                <div>
-                    <<<<<<< HEAD <iframe width="320" height="320"
-                        src="https://www.youtube.com/embed/gOo2t0BSGQE"=======<iframe width="310" height="320"
-                        src="https://www.youtube.com/embed/gOo2t0BSGQE">>>>>>> aparece-php
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
-                        web-share"
-                        allowfullscreen></iframe>
+                </div>
+                <div id="categorias">
+                    <p class="headerblog">LOS JUEGOS MÁS JUGADOS</p>
+                    <ul>
+                        <?php while ($juego = $queryJuegosMasvistos->fetch_array()) {
+                            ?>
+                            <li>
+                                <?php echo $queryJuegoDerecho ?>
+                                <a href="./detalles.php?detalles&id_juego=<?php echo $juego[1] ?>">
+                                    <?php echo $juego[0] ?> -
+                                    <?php echo $juego[2] ?> veces jugado
+                                </a>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+                <div id="categorias">
+                    <p class="headerblog">LAS PARTIDAS MÁS VISTAS</p>
+                    <ul>
+                        <?php while ($partidas = $queryPartidasMasVistas->fetch_array()) { ?>
+                            <li>
+                                <a href="./articulos.php?idarticulo=<?php echo $partidas[2] ?>">
+                                    <?php $newDate = date("d/m/Y", strtotime($partidas[0])); ?>
+                                    <?php echo $newDate ?> -
+                                    <?php echo $partidas[1] ?> -
+                                    <?php echo $partidas[3] ?> visitas
+                                </a>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+                <div id="categorias">
+                    <p class="headerblog">LOS SOCIOS CON MÁS PUNTUACIÓN</p>
+                    <ul>
+                        <?php while ($socio = $queryPuntuacionSocios->fetch_array()) { ?>
+                            <li>
+                                <a href="./socios.php">
+                                    <?php echo $socio[0] ?> -
+                                    <?php echo $socio[1] ?> puntos
+                                </a>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+                <div id="videowidget">
+                    <div>
+                        <iframe width="310" height="320" src="https://www.youtube.com/embed/gOo2t0BSGQE">>>>>>>
+                            aparece-php
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+                            picture-in-picture;
+                            web-share"
+                            allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <p class="limpiar"></p>
-    <?php
-    include("./php/pie.php");
-    ?>
+        <p class="limpiar"></p>
+        <?php
+        include("./php/pie.php");
+        ?>
     </div>
 </body>
 

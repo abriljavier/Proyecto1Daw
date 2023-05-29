@@ -108,33 +108,26 @@ div#footer div#menufinal {
     /* border: 1px solid silver; */
     background-color: #42306A;
     margin-top: 10PX;
-    padding: 5px;
     float: right;
     height: 25px;
     width: 550px;
+    display: flex;
+    justify-content: center;
+    margin-top: 17.5px;
 }
 
 div.menuF {
     /* border: 1px solid white; */
-    float: right;
+    float: left;
     height: 25px;
-    width: 90px;
+    width: 100px;
     text-align: center;
     padding-top: 5px;
-    padding-left: 7px;
-    padding-right: 7px;
 }
 
 div.menuF:hover {
     font-weight: bold;
 }
-
-/* <div class="contenedorpodio">
-                        <div class="oro">Nombre</div>
-                        <div class="plata">Nombre</div>
-                        <div class="bronce">Nombre</div>
-                        <p>Podio de campeones</p>
-                    </div> */
 
 div.contenedorpodio {
     /* border: 1px solid white; */
